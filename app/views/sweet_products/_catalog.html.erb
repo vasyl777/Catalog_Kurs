@@ -1,0 +1,24 @@
+<div class="catalog">
+  <div class="row">
+    <div class="col-12 col-md-2 col-lg-3">
+      <% if @categories %>
+        <ul>
+          <% @categories.each do |category|%>
+          <% if @category && category.id == @category.id %>
+            <li><%=category.name%></li>
+          <%else%>
+            <li><%=render category%></li>
+            <%end%>
+          <%end%>
+        </ul>
+      <%end%>
+      <%= select_tag :sugar_substitute, options_for_select([["Цукрозамінник",true],["Справжній цукор",false]]), onchange:"change_sugar_substitute(this)", prompt: "Тип цукру" %>
+    </div>
+    <div class="col-12 col-md-10 col-lg-9 row" id="sweet_products">
+      <%= render(SweetProductComponent.with_collection(@sweet_products))%>
+    </div>
+  </div>
+    <div id="paginations">
+      <%= render "pages/paginations" %>
+    </div>
+</div>

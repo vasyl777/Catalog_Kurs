@@ -1,0 +1,49 @@
+.bg-secondary{
+  transition: .5s;
+  background-color: $secondary-color !important;
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.card{
+  border-radius: 5px;
+  min-height: 350px;
+  overflow: hidden;
+  img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.catalog{
+  .category{
+    list-style: none;
+    padding-inline-start: 0px;
+    li{
+      margin: 5px 0px;
+      &:before{
+        content: "🐈";
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.pagination{
+  .page-item{
+    .page-link{
+      color: $secondary-hover;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    &.disabled{
+      .page-link{
+        color: lightgray;
+      }
+    }
+  }
+}

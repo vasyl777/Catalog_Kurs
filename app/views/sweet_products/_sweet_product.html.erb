@@ -1,0 +1,15 @@
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card m-3">
+    <%= link_to sweet_product_path(sweet_product) do %>
+    <%= sweet_product_image(sweet_product.image) %>
+    <div class="card-body row">
+      <h5><%= sweet_product.name%></h5>
+      <div class="tags text-left">
+        <%sweet_product.categories.each do |category|%>
+          <small><%= link_to category.name, category_path(category),class: "badge bg-secondary"%></small>
+        <%end%>
+      </div>
+    </div>
+  <%end%>
+</div>
+</div>

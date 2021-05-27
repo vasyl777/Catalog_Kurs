@@ -1,0 +1,4 @@
+catalog = document.getElementById("sweet_products")
+catalog.innerHTML = '<%=j render(SweetProductComponent.with_collection(@sweet_products))%>'
+pagination = document.getElementById("paginations")
+pagination.innerHTML= '<%=j render "pages/paginations" %>'

@@ -1,0 +1,35 @@
+<div class="my-4">
+  <div class="row">
+    <div class="col-12 col-md-6 col-xl-5">
+      <% @sweet_product.images.each do|image|%>
+        <%= image_tag image, width: "100%"%>
+      <%end%>
+      <%= sweet_product_image @sweet_product.image, height: "100%", width: "100%"%>
+    </div>
+    <div class="col-12 col-md-6 col-xl-7">
+      <h1 class="pb-0 mb-0">
+        <%= @sweet_product.name%>
+      </h1>
+      <div class="tags mb-3">
+        <%@sweet_product.categories.each do |category|%>
+          <%= link_to category.name, category_path(category),class: "badge bg-secondary"%>
+        <%end%>
+      </div>
+      <span class="d-block my-3">
+        <b><%= @sweet_product.price%> грн. </b>
+        за 100 грам
+      </span>
+
+      <div class="my-3">
+        <%= render "call_me/form"%>
+      </div>
+
+
+        <h5 class="mb-0 pb-0">Опис:</h5>
+        <div class="mt-1">
+          <%= @sweet_product.description%>
+        </div>
+
+    </div>
+  </div>
+</div>

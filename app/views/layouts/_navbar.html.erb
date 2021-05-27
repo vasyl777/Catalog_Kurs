@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light">
+  <div class="container">
+    <%= link_to t("navbar.catalog"), sweet_products_path%>
+
+    <%= link_to root_path, class:"navbar-brand" do %>
+    "<%=t "navbar.title" %>"
+    <%end%>
+
+    <%= form_tag url_for(), method: :get, class: "d-flex" do %>
+      <%= text_field_tag(
+          :search,
+          params[:search],
+          placeholder: t("navbar.search.placeholder"),
+          class: "form-control  me-2"
+      ) %>
+            <button class="btn btn-marmelad" type="submit"><%=t "navbar.search.button" %></button>
+    <% end %>
+  </div>
+</nav>
+<header class="d-flex justify-content-start align-items-center">
+  <div class="container">
+    <h1 class="">Мармеладний Кіт це
+      <div id="typed-strings">
+        <p>марррммеладна насолода 🐈</p>
+        <p>200 видів корисних цукерок</p>
+        <p>альтернатива звичним солодощам</p>
+        <p>скоро у твоєму місті (або обирай НП🚚)</p>
+      </div>
+      <span id="typed"></span>
+
+    </h1>
+  </div>
+</header>

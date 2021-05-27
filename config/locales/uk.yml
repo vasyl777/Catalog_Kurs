@@ -1,0 +1,10 @@
+uk:
+  time:
+    formats:
+      long: "%F AS %T%:z    "
+  navbar:
+    title: Мармеладний кіт
+    catalog: Каталог солодощів
+    search:
+      placeholder: Пошук...
+      button: Знайти

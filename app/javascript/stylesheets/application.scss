@@ -1,0 +1,17 @@
+@import "bootstrap";
+@import "./actiontext.scss";
+@import "params";
+
+@import "navbar";
+@import "products";
+
+a{
+  transition: .5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $secondary-hover;
+  &:hover{
+    color: $secondary-color;
+  }
+}

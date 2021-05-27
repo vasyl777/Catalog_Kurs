@@ -1,0 +1,37 @@
+$primary-color: #264653;
+
+$secondary-color: #e76f51;
+$secondary-hover: #f4a261;
+
+.btn-marmelad{
+  transition: .5s;
+  background-color: transparent;
+  border: 2px solid $secondary-hover;
+  color: $secondary-hover;
+  border-radius: 5px;
+  font-weight: bold;
+  &:hover{
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: $primary-color;
+  }
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+input:not([type="submit"]){
+  transition: .5s;
+  background-color: transparent;
+  border: 2px solid $secondary-hover;
+  border-radius: 5px;
+  color: $secondary-hover;
+  &:focus{
+    background-color: transparent;
+    border: 2px solid $secondary-color;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba($secondary-color, .5);
+    color: $secondary-color;
+  }
+}

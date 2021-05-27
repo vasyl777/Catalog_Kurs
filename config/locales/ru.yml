@@ -1,0 +1,7 @@
+ru:
+  navbar:
+    title: Мармеладный кот
+    catalog: Каталог сладостей
+    search:
+      placeholder: Поиск...
+      button: Найти

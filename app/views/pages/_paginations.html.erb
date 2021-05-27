@@ -1,0 +1,35 @@
+<% if @count >$PER_PAGE%>
+<ul class="pagination justify-content-center" >
+  <%if @page > 1 %>
+    <li class="page-item">
+      <%= button_tag "previous", class:"page-link", data:{page: @page-1},onClick:"pagination_js(this);" %>
+    </li>
+    <%if @page > 2 %>
+      <li class="page-item">
+        <%= button_tag @page-2, class:"page-link", data:{page: @page-2},onClick:"pagination_js(this);" %>
+      </li>
+    <%end%>
+    <li class="page-item">
+      <%= button_tag  @page-1, class:"page-link", data:{page: @page-1},onClick:"pagination_js(this);" %>
+    </li>
+  <%end%>
+  <li class="page-item disabled">
+    <%= button_tag @page, class:"page-link" %>
+  </li>
+  <%if @page*$PER_PAGE<@count %>
+
+    <li class="page-item">
+      <%= button_tag @page+1,class:"page-link", data:{page: @page+1},onClick:"pagination_js(this);" %>
+    </li>
+
+    <%if (@page+1)*$PER_PAGE<@count %>
+      <li class="page-item">
+        <%= button_tag @page+2, class:"page-link", data:{page: @page+2},onClick:"pagination_js(this);" %>
+      </li>
+    <%end%>
+    <li class="page-item">
+      <%= button_tag t("next"), class:"page-link", data:{page: @page+1},onClick:"pagination_js(this);" %>
+    </li>
+  <%end%>
+</ul>
+<%end%>
